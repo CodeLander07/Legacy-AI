@@ -37,7 +37,7 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden pt-20"
+        className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden pt-10"
       >
         {/* Background Glow - More subtle and spread out */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-amber-500/5 blur-[150px] rounded-full pointer-events-none" />
@@ -56,7 +56,7 @@ export default function Home() {
           </motion.h1>
           
           <motion.p variants={fadeInUp} className="text-lg text-neutral-400 mb-16 max-w-xl mx-auto leading-relaxed font-light">
-            LegacyAI allows families to store life experiences, values, and lessons as a secure digital time capsule — accessible to future generations when the time is right.
+            Legacy-AI allows families to store life experiences, values, and lessons as a secure digital time capsule accessible to future generations when the time is right.
           </motion.p>
           
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-5">
@@ -67,7 +67,7 @@ export default function Home() {
               Create Your Legacy
             </Link>
             <Link 
-              href="#" 
+              href="signup" 
               className="w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-white/5 text-white border border-white/10 font-medium rounded-full transition-all hover:-translate-y-0.5 text-base backdrop-blur-sm"
             >
               View Demo
@@ -135,8 +135,8 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto w-full py-20">
           <motion.div variants={fadeInUp} className="text-center mb-24">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">How LegacyAI Works</h2>
-            <div className="h-1 w-24 bg-amber-500 mx-auto rounded-full" />
+            <h2 className="text-3xl md:text-5xl font-bold mb-8">How Legacy-AI Works</h2>
+            <div className="h-1 w-1/3 bg-amber-500 mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
@@ -179,33 +179,33 @@ export default function Home() {
             <p className="text-neutral-400 text-lg">Advanced technology meeting timeless values.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 text-center lg:grid-cols-4 gap-8">
             <motion.div variants={fadeInUp}>
               <FeatureCard 
                 title="Digital Time Capsule"
                 description="Store videos, voice notes, and text in a permanent digital vault."
-                icon={<span className="text-3xl">💎</span>}
+                icon={<span className="text-6xl">💎</span>}
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
               <FeatureCard 
                 title="Wisdom-Aware AI"
                 description="An AI trained on your specific life stories to answer future questions."
-                icon={<span className="text-3xl">🧠</span>}
+                icon={<span className="text-6xl">🧠</span>}
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
               <FeatureCard 
                 title="Time-Based Unlocking"
                 description="Set messages to unlock when your child turns 18, 21, or 30."
-                icon={<span className="text-3xl">⏰</span>}
+                icon={<span className="text-6xl">⏰</span>}
               />
             </motion.div>
             <motion.div variants={fadeInUp}>
               <FeatureCard 
                 title="Private Family Vault"
-                description="Bank-grade encryption ensures your memories stay private forever."
-                icon={<span className="text-3xl">🔒</span>}
+                description="Encryption ensures your memories stay private forever."
+                icon={<span className="text-6xl">🔒</span>}
               />
             </motion.div>
           </div>
@@ -218,14 +218,14 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="min-h-[80vh] flex items-center justify-center px-6"
+        className="min-h-[100vh] flex items-center justify-center px-6"
       >
         <div className="max-w-4xl mx-auto w-full p-16 rounded-[2.5rem] bg-linear-to-b from-neutral-900/50 to-transparent border border-white/5 relative overflow-hidden text-center">
           <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/50 to-transparent" />
           
           <h2 className="text-3xl md:text-5xl font-bold mb-8">Built for Families, Not Feeds</h2>
           <p className="text-xl text-neutral-400 leading-relaxed mb-12 max-w-2xl mx-auto">
-            LegacyAI is private by design. Your family’s memories are never used for ads, training public models, or social sharing. This is your private sanctuary.
+            Legacy-AI is private by design. Your family’s memories are never used for ads, training public models, or social sharing. This is your private sanctuary.
           </p>
           
           <div className="flex flex-wrap justify-center gap-8 text-sm text-neutral-500 uppercase tracking-[0.2em] font-medium">
@@ -249,7 +249,7 @@ export default function Home() {
             Have questions or ideas? We’d love to hear from you.
           </p>
           
-          <form className="space-y-6 text-left">
+          <form className="space-y-6 text-left" action='/contact'>
             <div>
               <label className="block text-sm font-medium text-neutral-400 mb-2">Email Address</label>
               <input 
@@ -266,10 +266,7 @@ export default function Home() {
                 placeholder="How can we help?"
               />
             </div>
-            <button 
-              type="button"
-              className="w-full py-4 px-6 bg-white text-black font-bold rounded-xl hover:bg-neutral-200 transition-colors text-lg"
-            >
+            <button  className=" cursor-pointer w-full py-4 px-6 bg-white text-black font-bold rounded-xl hover:bg-neutral-200 transition-colors text-lg">
               Send Message
             </button>
           </form>

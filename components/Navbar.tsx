@@ -38,8 +38,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-2 group">
+          <img src="/legacy.png" className='h-10' alt="" />
           <span className="text-lg font-medium tracking-wide text-white/90 group-hover:text-white transition-colors">
-            LegacyAI
+            Legacy-AI
           </span>
         </Link>
         

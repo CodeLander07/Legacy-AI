@@ -9,13 +9,13 @@ export default function Footer() {
         </div>
         
         <div className="flex items-center gap-8">
-          <Link href="#" className="text-sm text-neutral-500 hover:text-amber-500 transition-colors">
+          <Link href="/contact" className="text-sm text-neutral-500 hover:text-amber-500 transition-colors">
             About
           </Link>
-          <Link href="#" className="text-sm text-neutral-500 hover:text-amber-500 transition-colors">
+          <Link href="/contact" className="text-sm text-neutral-500 hover:text-amber-500 transition-colors">
             Privacy
           </Link>
-          <Link href="#" className="text-sm text-neutral-500 hover:text-amber-500 transition-colors">
+          <Link href="/contact" className="text-sm text-neutral-500 hover:text-amber-500 transition-colors">
             Contact
           </Link>
         </div>
