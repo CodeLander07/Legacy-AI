@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Premium Dark Theme Base */
+  --background: #050505; /* Near black */
+  --foreground: #e5e5e5; /* Soft white */
+  
+  /* Warm Accents */
+  --accent-primary: #f59e0b; /* Amber 500 */
+  --accent-glow: rgba(245, 158, 11, 0.15);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities for Glow Effects */
+.text-glow {
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.bg-glow {
+  background: radial-gradient(circle at center, var(--accent-glow) 0%, transparent 70%);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-out forwards;
 }
