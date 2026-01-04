@@ -111,7 +111,7 @@ export default function AuthForm({ type }: AuthFormProps) {
           <p className=" text-white">
             {type === 'login' ? (
               <>
-                Don't have an account?{' '}
+                Don't have an account ?{' '}
                 <a href="/signup" className="text-amber-400 hover:text-amber-300">
                   Create one
                 </a>
@@ -119,7 +119,7 @@ export default function AuthForm({ type }: AuthFormProps) {
               </>
             ) : (
               <>
-                Already have an account?{' '}
+                Already have an account ?{' '}
                 <a href="/login" className="text-amber-400 hover:text-amber-300">
                   Sign in
                 </a>
