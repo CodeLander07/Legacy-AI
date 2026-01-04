@@ -54,7 +54,7 @@ export default function AuthForm({ type }: AuthFormProps) {
       <h2 className="text-2xl font-bold text-white mb-6 text-center">
         {type === 'login' ? 'Welcome Back' : 'Create Your Legacy'}
       </h2>
-      
+
       <form onSubmit={handleSubmit} className="space-y-4">
         {type === 'signup' && (
           <div>
@@ -68,7 +68,7 @@ export default function AuthForm({ type }: AuthFormProps) {
             />
           </div>
         )}
-        
+
         <div>
           <label className="block text-sm font-medium text-neutral-400 mb-1">Email Address</label>
           <input
@@ -80,7 +80,7 @@ export default function AuthForm({ type }: AuthFormProps) {
             placeholder="you@example.com"
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-neutral-400 mb-1">Password</label>
           <input
@@ -106,6 +106,28 @@ export default function AuthForm({ type }: AuthFormProps) {
         >
           {loading ? 'Processing...' : type === 'login' ? 'Sign In' : 'Start Your Journey'}
         </button>
+        <div className='flex justify-center items-center w-full  h-10'>
+
+          <p className=" text-white">
+            {type === 'login' ? (
+              <>
+                Don't have an account?{' '}
+                <a href="/signup" className="text-amber-400 hover:text-amber-300">
+                  Create one
+                </a>
+                
+              </>
+            ) : (
+              <>
+                Already have an account?{' '}
+                <a href="/login" className="text-amber-400 hover:text-amber-300">
+                  Sign in
+                </a>
+                
+              </>
+            )}
+          </p>
+        </div>
       </form>
     </div>
   );
